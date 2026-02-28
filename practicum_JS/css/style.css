@@ -1,0 +1,48 @@
+th {
+    background-color: lightgrey;
+    padding: 2px;
+}
+
+tbody {
+    background-color: rgb(241, 241, 241);
+}
+
+
+td, th {
+    padding: 5px;
+}
+
+table {
+    border-spacing: 0;
+}
+
+table, td, th {
+    border: 1px solid rgb(222, 222, 222);
+}
+
+#structure, #category, #country, #city{
+    float: right;
+    width: 170px;
+}
+
+#yearFrom, #yearTo, #heightFrom, #heightTo{
+    width: 60px;
+}
+
+label[for="heightFrom"]{
+    margin-right: 34px;
+}
+
+label[for="yearFrom"]{
+    margin-right: 60px;
+}
+
+form {
+    display: inline-block;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+h3, th {
+    text-align: center;
+}
