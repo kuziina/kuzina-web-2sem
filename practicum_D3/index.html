@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title> Трансформация и анимация</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="d3.v7.min.js"> </script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/image.js"></script>
+    <script src="JavaScript/path.js"></script>
+  </head>
+  <body>   
+    <form id="setting">
+        <p class="fields" id="coordinates"><b>Координаты рисунка</b><br>
+        <label for="cx">x: 
+        <input type="number" id="cx" value="300" max="600" min="0">
+        </label><br>
+        <label for="cy">y: 
+        <input type="number" id="cy" value="300" max="600" min="0">
+        </label>
+        </p>
+        <p class="fields" id="way" hidden><b>Пути перемещения</b><br>
+        <select id="opt">
+          <option value="0">Буквой "Г"</option>
+          <option value="1">По кругу</option>
+        </select>
+        </p>
+        <p class="fields" id="scale">
+            <b>Масштаб</b><br>
+            <label for="mx">по x: 
+            <input type="number" id="mx" max="600" min="0" value="1">
+            </label><br>
+            <label for="my">по y: 
+            <input type="number" id="my"  max="600" min="0" value="1">
+            </label>
+        </p>
+          <p class="fields" id="turn">
+            <b>Поворот</b><br>
+            <label for="angle">угол:  
+            <input type="number" id="angle" value="0" min="0" max="600"></label><br>
+          </p>
+          <div>
+        <input type="button" value="Нарисовать" id="drawBtn">
+        <input type="button" value="Очистить" id="resetBtn">
+          </div>
+          <div id="anFields"><input type="checkbox" id="animation">Включить анимацию?</div>
+  </form>
+    <svg></svg>
+
+  </body>
+</html>
