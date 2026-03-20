@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="JS/d3.v7.min.js"></script>
+        <script src="JS/image.js"></script>
+        <script src="JS/main.js"></script>
+        <script src="JS/path.js"></script>
+    </head>
+    <body>
+        <form id="setting">
+            <label>
+                Скорость анимации:  
+                <input type="number" id="speed" max="100" min="1" value="5">
+                сек
+            </label>
+            <p class="fields" id="scale">
+            <b>Масштаб</b><br>
+            <label for="mx">по x: 
+            <input type="number" id="mx" max="600" min="0" value="1">
+            </label>
+            <label>до: 
+            <input type="number" id="mx2" max="600" min="0" value="1">
+            </label><br>
+            <label for="my">по y: 
+            <input type="number" id="my"  max="600" min="0" value="1">
+            </label>
+            <label>до: 
+            <input type="number" id="my2" max="600" min="0" value="1">
+            </label>
+        </p>
+          <p class="fields" id="turn">
+            <b>Поворот</b><br>
+            <label for="angle">угол:  
+            <input type="number" id="angle" value="0" min="0" max="600"></label>
+            <label>до:  
+            <input type="number" id="angleTo" min="0" max="600"></label><br>
+          </p>
+            <input type="button" id="animate" value="Анимировать">
+            <input type="button" id="reset" value="Очистить">
+        </form>
+       <svg></svg> 
+    </body>
+</html>
