@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Список бестселлеров</title>
+    <link rel="stylesheet" type="text/css" href="flexGridStyle.css">
+    <link rel="stylesheet" type="text/css" href="chart.css">
+    <script src="C:\Users\Екатерина\projects\веб\пз2 - d3\JS\d3.v7.min.js"></script>
+    <script src="JS1/data.js"></script>
+    <script src="JS1/main.js"></script>
+    <script src="JS3/chart.js"></script>
+    <script src="JS3/main.js"></script>
+    <script src="JS3/table.js"></script>
+</head>
+
+<body background="../image/15740871_268_Organic_White_Background.jpg">
+    <nav>
+        <a href="main.html">Главная</a><br>
+        <a href="rating.html" class="menu">Список бестселлеров</a> <br>
+    </nav>
+    <hr>
+    <details>
+        <summary>График</summary>
+        <form id="setting">
+            <p>OX</p>
+            <input type="radio" id="graf" name="graf" checked value="Жанр">Жанр<br>
+            <input type="radio" id="graf" name="graf" value="Год издания">Год издания<br>
+
+            <p id="OY">OY
+            <p>
+                <input type="checkbox" id="graf" name="graf" value="max"> Максимальный рейтинг<br>
+                <input type="checkbox" id="graf" name="graf" value="min"> Минимальный рейтинг
+            <p>
+                Тип графика
+                <select>
+                    <option value="0">Точечная диаграмма</option>
+                    <option value="1">Гистограмма</option>
+                    <option value="2">График</option>
+                </select>
+            </p>
+            <p><input type="button" value="Построить" id="draw"></p>
+        </form>
+    </details>
+    <details>
+        <summary>Фильтр</summary>
+        <form id="filter">
+            <p>
+                <label for="name">Название:</label>
+                <input type="text" id="name">
+            </p>
+            <p>
+                <label for="author">Автор:</label>
+                <input type="text" id="author">
+            </p>
+            <p>
+                <label for="yearFrom">Год:</label>
+                от <input type="number" id="yearFrom">
+                до <input type="number" id="yearTo">
+            </p>
+            <p>
+                <label for="genre">Жанр:</label>
+                <input type="text" id="genre">
+            </p>
+            <p>
+                <label for="ratingFrom">Рейтинг:</label>
+                от <input type="number" id="ratingFrom">
+                до <input type="number" id="ratingTo">
+            </p>
+            <input type="button" value="Найти" id="findBtn">
+            <input type="button" value="Очистить фильтры" id="clearBtn">
+        </form>
+    </details>
+    <details>
+        <summary>Сортировка</summary>
+        <form id="sort">
+            <p> Сортировать по:</p>
+            <p>
+                <select id="fieldsFirst">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsFirstDesc">
+            </p>
+            <p>
+                <select id="fieldsSecond">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsSecondDesc">
+            </p>
+            <p>
+                <select id="fieldsThird">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsThirdDesc">
+            </p>
+            <input type="button" value="Сортировать" id="sortBtn">
+            <input type="button" value="Сбросить сортировку" id="resetBtn">
+        </form>
+    </details>
+    <br>
+    <svg></svg>
+    <table id="list">
+    </table>
+</body>
+<script src="JS1/filter.js"></script>
+<script src="JS1/sort.js"></script>
+
+</html>
