@@ -1,0 +1,30 @@
+td, th {
+  border: solid 1px grey;
+  padding: 7px;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+th {
+  background-color: rgb(218, 234, 239);
+}
+
+.hide{
+  display: none;
+}
+
+.active, span:hover{
+  color:rgb(59, 157, 255);
+  font-weight: bold;
+  font-size: larger;
+}
+
+span{
+  margin: 12px;
+}
+
+div{
+  margin-top: 15px;
+}
